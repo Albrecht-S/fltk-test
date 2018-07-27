@@ -1,10 +1,12 @@
 language: c++
 
-compiler: clang
+## compiler: clang
 
-before_install:
-- sudo apt-get update -q
-- sudo apt-get install -y doxygen libxinerama-dev libxcursor-dev libasound2-dev
+os: osx
+
+# before_install:
+# - sudo apt-get update -q
+# - sudo apt-get install -y doxygen libxinerama-dev libxcursor-dev libasound2-dev
 
 script:
 - make clean
