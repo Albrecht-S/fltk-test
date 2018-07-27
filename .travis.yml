@@ -11,8 +11,8 @@ os:
 # - sudo apt-get install -y doxygen libxinerama-dev libxcursor-dev libasound2-dev
 
 install:
-  if: os = osx
   - brew install ccache
+  if: os = osx
 #  if: os = linux
 #  - sudo apt-get install -y doxygen
 
