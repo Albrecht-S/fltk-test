@@ -13,8 +13,8 @@ os:
 install:
   if: os = osx
   - brew install ccache
-  if: os = linux
-  - sudo apt-get install -y doxygen
+#  if: os = linux
+#  - sudo apt-get install -y doxygen
 
 script:
 - make clean
