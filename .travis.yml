@@ -10,7 +10,13 @@ os:
 # - sudo apt-get update -q
 # - sudo apt-get install -y doxygen libxinerama-dev libxcursor-dev libasound2-dev
 
+install:
+  if: os = osx
+  - brew install ccache
+  if: os = linux
+  - sudo apt-get install -y doxygen
+
 script:
 - make clean
 - make
-# - (cd documentation; make html)
+- (cd documentation; make html)
