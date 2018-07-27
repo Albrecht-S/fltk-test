@@ -2,7 +2,9 @@ language: c++
 
 ## compiler: clang
 
-os: osx
+os:
+  - linux
+  - osx
 
 # before_install:
 # - sudo apt-get update -q
@@ -10,5 +12,5 @@ os: osx
 
 script:
 - make clean
-- make -j3
-- (cd documentation; make html)
+- make
+# - (cd documentation; make html)
