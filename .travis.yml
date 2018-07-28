@@ -1,17 +1,17 @@
 os:
-  - linux
-    compiler: clang
-  - osx
-    compiler: gcc
-    language:
-      - c++
-      - objective-c
+- linux
+  compiler: clang
+- osx
+  compiler: gcc
+  language:
+  - c++
+  - objective-c
 
 before_install:
-  - echo "os = $TRAVIS_OS_NAME"
-  - if [ $TRAVIS_OS_NAME == linux ]; then sudo apt-get update -q && sudo apt-get install -y doxygen libxinerama-dev libxcursor-dev libasound2-dev; fi
-  - if [ $TRAVIS_OS_NAME == osx ]; then brew update && brew install doxygen; fi
+- echo "os = $TRAVIS_OS_NAME"
+- if [ $TRAVIS_OS_NAME == linux ]; then sudo apt-get update -q && sudo apt-get install -y doxygen libxinerama-dev libxcursor-dev libasound2-dev; fi
+- if [ $TRAVIS_OS_NAME == osx ]; then brew update && brew install doxygen; fi
 
 script:
-  - make clean && make -j3
-  - (cd documentation; make html)
+- make clean && make -j3
+- (cd documentation; make html)
