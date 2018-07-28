@@ -1,11 +1,10 @@
 os:
 - linux
-  compiler: clang
 - osx
-  compiler: gcc
-  language:
-  - c++
-  - objective-c
+
+language:
+- c++
+- objective-c
 
 before_install:
 - echo "os = $TRAVIS_OS_NAME"
