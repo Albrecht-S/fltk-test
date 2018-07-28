@@ -13,4 +13,5 @@ before_install:
 
 script:
 - make clean && make -j3
+- doxygen --version
 - (cd documentation; make html)
